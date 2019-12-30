@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Grid from "./grid.js";
 
-import "./styles.css";
+var _someData = [
+  { Name: "Abc", Age: 15, Location: "Bangalore" },
+  { Name: "Def", Age: 43, Location: "Mumbai" },
+  { Name: "Uff", Age: 30, Location: "Chennai" },
+  { Name: "Ammse", Age: 87, Location: "Delhi" },
+  { Name: "Yysse", Age: 28, Location: "Hyderabad" }
+];
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello why is it so slow CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Grid data={_someData} />, document.getElementById("root"));
