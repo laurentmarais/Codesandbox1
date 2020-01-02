@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Grid from "./grid.js";
+import "bootstrap/dist/css/bootstrap.css";
 
 var _someData = [
   { Name: "Abc", Age: 15, Location: "Bangalore" },

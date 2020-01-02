@@ -17,11 +17,7 @@ export default class Grid extends React.Component {
     var keys = this.getKeys();
     return keys.map((key, index) => {
       //             console.log(key, index);
-      return (
-        <th style={{ border: "1px solid black" }} key={key}>
-          {key.toUpperCase()}
-        </th>
-      );
+      return <th key={key}>{key.toUpperCase()}</th>;
     });
   };
 
@@ -39,33 +35,19 @@ export default class Grid extends React.Component {
 
   render() {
     return (
-      //     <style>
-      //         thead {color:green;}
-      //         tbody {color:blue;}
-      //         table, th, td {
-      //             border: 1px solid black;
-      //    }
-      //     td, th{
-      //             padding: 5px;
-      //    }
-      //     </style>
-      <div>
-        <table style={{ border: "1px solid black" }}>
-          <thead style={{ border: "1px solid black" }}>
+      <React.Fragment>
+        <table className="table-sm table-bordered">
+          <thead>
             <tr>{this.getHeader()}</tr>
           </thead>
           <tbody>{this.getRowsData()}</tbody>
         </table>
-      </div>
+      </React.Fragment>
     );
   }
 }
 const RenderRow = props => {
   return props.keys.map((key, index) => {
-    return (
-      <td style={{ border: "1px solid black" }} key={props.data[key]}>
-        {props.data[key]}
-      </td>
-    );
+    return <td key={props.data[key]}>{props.data[key]}</td>;
   });
 };
